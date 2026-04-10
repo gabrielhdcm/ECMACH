@@ -2,67 +2,30 @@
 const projectsData = [
     {
         id: 1,
-        title: "Sistema de Despoeiramento Industrial",
-        company: "Setor de Fertilizantes",
-        problem: "Emissão excessiva de pó prejudicando qualidade do ar e gerando reclamações de vizinhos",
-        solution: "Desenvolvemos um ciclone customizado com filtro de manga de alta eficiência, integrado ao sistema de aspiração existente",
-        results: "95% redução de emissões, conformidade ambiental atingida, economia de 40% em custos de adequação"
+        title: "Sistema de Preparacao e Dosagem",
+        company: "Linha de processo industrial",
+        image: "image/sistema de preparação e dosagem.jpg",
+        problem: "Necessidade de melhorar a precisao de alimentacao de materia-prima e reduzir variacoes no processo.",
+        solution: "Projeto e implementacao de sistema de preparacao e dosagem com ajuste fino operacional e integracao ao fluxo produtivo.",
+        results: "Maior estabilidade de processo, melhor repetibilidade na dosagem e reducao de perdas operacionais."
     },
     {
         id: 2,
-        title: "Ciclone de Alta Eficiência",
-        company: "Mineração - Separação de Pó",
-        problem: "Perda de material fino em processo de separação granulométrica",
-        solution: "Ciclone duplo com geometria otimizada para melhor separação de partículas finas",
-        results: "Recuperação de 98% do material, aumento de produtividade em 35%"
+        title: "Cavalete Alto Alinhador",
+        company: "Suporte e alinhamento mecanico",
+        image: "image/Cavalete alto alinhador.jpg",
+        problem: "Desalinhamentos recorrentes em componentes de movimentacao, gerando desgaste e paradas nao programadas.",
+        solution: "Desenvolvimento de cavalete alto alinhador para garantir geometria correta, estabilidade e facil manutencao.",
+        results: "Melhoria no alinhamento do conjunto, aumento de confiabilidade e reducao de intervencoes corretivas."
     },
     {
         id: 3,
-        title: "Filtro de Manga Especializado",
-        company: "Indústria Química",
-        problem: "Filtração inadequada de pó fino em processo crítico de produção",
-        solution: "Filtro de manga premium com cartuchos especializados para filtração de precisão",
-        results: "Qualidade do produto melhorada em 40%, redução de retrabalho em 50%"
-    },
-    {
-        id: 4,
-        title: "Controle Ambiental Integrado",
-        company: "Processamento de Grãos",
-        problem: "Poeira em suspensão causando problemas respiratórios e conformidade",
-        solution: "Sistema modular de despoeiramento com múltiplos pontos de captura",
-        results: "Zero reclamações ambientais, ambiente de trabalho 100% seguro"
-    },
-    {
-        id: 5,
-        title: "Reforma Completa de Equipamento",
-        company: "Indústria Pesada - 15 Anos de Operação",
-        problem: "Equipamento antigo com falhas frequentes impactando produção",
-        solution: "Reforma integral com peças especializadas e reengenharia de componentes críticos",
-        results: "Equipamento 100% operacional, 30% mais eficiente, vida útil estendida em 10 anos"
-    },
-    {
-        id: 6,
-        title: "Filtro de Cartucho Premium",
-        company: "Alimentos e Bebidas",
-        problem: "Perda de pressão rápida em filtros convencionais",
-        solution: "Cartuchos de alta capacidade com tecnologia micrométrica premium",
-        results: "Ciclo de limpeza 40% mais longo, eficiência energética melhorada"
-    },
-    {
-        id: 7,
-        title: "Ciclone Duplo - Grande Vazão",
-        company: "Reciclagem - Tratamento de Resíduos",
-        problem: "Capacidade insuficiente para grande volume de material",
-        solution: "Ciclone duplo paralelo com eficiência combinada",
-        results: "Vazão aumentada em 80%, custo por tonelada reduzido em 35%"
-    },
-    {
-        id: 8,
-        title: "Solução Modular de Despoeiramento",
-        company: "Siderurgia - Emissão Zero",
-        problem: "Múltiplos pontos de emissão de particulado em linhas de produção",
-        solution: "Sistema modular escalável que integra todos os pontos de captura",
-        results: "Emissão reduzida a zero, conformidade total com legislação ambiental"
+        title: "Polias Especiais",
+        company: "Transmissao e movimentacao industrial",
+        image: "image/polias especiais.jpg",
+        problem: "Conjunto de transmissao exigia polias fora de padrao para atender carga, velocidade e vida util esperadas.",
+        solution: "Fabricacao de polias especiais sob especificacao tecnica, com foco em resistencia e desempenho continuo.",
+        results: "Melhor performance mecanica, maior durabilidade dos componentes e operacao mais estavel."
     }
 ];
 
@@ -109,7 +72,11 @@ filterBtns.forEach(btn => {
 
 // MODAL DE PROJETOS
 function openModal(projectId) {
-    const project = projectsData[projectId - 1];
+    const project = projectsData.find((item) => item.id === projectId);
+    if (!project) {
+        return;
+    }
+
     const modal = document.getElementById('projectModal');
 
     document.getElementById('modalTitle').textContent = project.title;
@@ -117,6 +84,10 @@ function openModal(projectId) {
     document.getElementById('modalProblem').textContent = project.problem;
     document.getElementById('modalSolution').textContent = project.solution;
     document.getElementById('modalResults').textContent = project.results;
+    const modalImage = document.querySelector('.modal-image');
+    if (modalImage) {
+        modalImage.innerHTML = `<img src="${project.image}" alt="${project.title}">`;
+    }
 
     modal.classList.add('show');
     document.body.style.overflow = 'hidden';

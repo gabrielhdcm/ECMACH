@@ -107,136 +107,60 @@
             <!-- FILTROS -->
             <div class="gallery-filters">
                 <button class="filter-btn active" data-filter="todos">Todos</button>
-                <button class="filter-btn" data-filter="despoeiramento"><i class="fas fa-wind"></i> Despoeiramento</button>
-                <button class="filter-btn" data-filter="ciclones"><i class="fas fa-tornado"></i> Ciclones</button>
-                <button class="filter-btn" data-filter="filtros"><i class="fas fa-filter"></i> Filtros</button>
-                <button class="filter-btn" data-filter="manutencao"><i class="fas fa-tools"></i> Manutenção</button>
             </div>
 
             <!-- GRID -->
             <div class="gallery-grid">
-                <div class="gallery-item" data-category="despoeiramento">
+                <div class="gallery-item" data-category="todos">
                     <div class="gallery-image">
-                        <div class="image-placeholder"><i class="fas fa-wind"></i></div>
+                        <img src="image/sistema de preparação e dosagem.jpg" alt="Sistema de preparação e dosagem" loading="lazy">
                         <div class="gallery-overlay">
-                            <button class="view-btn" onclick="openModal(1)">Ver Projetos</button>
+                            <button class="view-btn" onclick="openModal(1)">Ver Projeto</button>
                         </div>
-                        <span class="badge">Despoeiramento</span>
+                        <span class="badge">Projeto Real</span>
                     </div>
                     <div class="gallery-info">
-                        <h3>Sistema de Despoeiramento Industrial</h3>
-                        <p>Setor de Fertilizantes</p>
+                        <h3>Sistema de Preparacao e Dosagem</h3>
+                        <p>Linha de processo industrial</p>
                         <div class="tags">
-                            <span>Engenharia</span>
-                            <span>Sob Medida</span>
+                            <span>Dosagem</span>
+                            <span>Precisao</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="ciclones">
+                <div class="gallery-item" data-category="todos">
                     <div class="gallery-image">
-                        <div class="image-placeholder"><i class="fas fa-tornado"></i></div>
+                        <img src="image/Cavalete alto alinhador.jpg" alt="Cavalete alto alinhador" loading="lazy">
                         <div class="gallery-overlay">
-                            <button class="view-btn" onclick="openModal(2)">Ver Projetos</button>
+                            <button class="view-btn" onclick="openModal(2)">Ver Projeto</button>
                         </div>
-                        <span class="badge">Ciclone</span>
+                        <span class="badge">Projeto Real</span>
                     </div>
                     <div class="gallery-info">
-                        <h3>Ciclone de Alta Eficiência</h3>
-                        <p>Mineração - Separação de Pó</p>
+                        <h3>Cavalete Alto Alinhador</h3>
+                        <p>Suporte e alinhamento mecanico</p>
                         <div class="tags">
-                            <span>Eficiência 95%</span>
-                            <span>Customizado</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="filtros">
-                    <div class="gallery-image">
-                        <div class="image-placeholder"><i class="fas fa-bars"></i></div>
-                        <div class="gallery-overlay">
-                            <button class="view-btn" onclick="openModal(3)">Ver Projetos</button>
-                        </div>
-                        <span class="badge">Filtros</span>
-                    </div>
-                    <div class="gallery-info">
-                        <h3>Filtro de Manga Especializado</h3>
-                        <p>Indústria Química</p>
-                        <div class="tags">
-                            <span>Precisão</span>
-                            <span>Durabilidade</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="despoeiramento">
-                    <div class="gallery-image">
-                        <div class="image-placeholder"><i class="fas fa-cloud"></i></div>
-                        <div class="gallery-overlay">
-                            <button class="view-btn" onclick="openModal(4)">Ver Projetos</button>
-                        </div>
-                        <span class="badge">Despoeiramento</span>
-                    </div>
-                    <div class="gallery-info">
-                        <h3>Controle Ambiental Integrado</h3>
-                        <p>Processamento de Grãos</p>
-                        <div class="tags">
-                            <span>Ambiental</span>
-                            <span>Conformidade</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="manutencao">
-                    <div class="gallery-image">
-                        <div class="image-placeholder"><i class="fas fa-tools"></i></div>
-                        <div class="gallery-overlay">
-                            <button class="view-btn" onclick="openModal(5)">Ver Projetos</button>
-                        </div>
-                        <span class="badge">Manutenção</span>
-                    </div>
-                    <div class="gallery-info">
-                        <h3>Reforma Completa de Equipamento</h3>
-                        <p>Indústria Pesada - 15 Anos</p>
-                        <div class="tags">
-                            <span>Reforma</span>
-                            <span>100% Operacional</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="filtros">
-                    <div class="gallery-image">
-                        <div class="image-placeholder"><i class="fas fa-layer-group"></i></div>
-                        <div class="gallery-overlay">
-                            <button class="view-btn" onclick="openModal(6)">Ver Projetos</button>
-                        </div>
-                        <span class="badge">Filtros</span>
-                    </div>
-                    <div class="gallery-info">
-                        <h3>Filtro de Cartucho Premium</h3>
-                        <p>Alimentos e Bebidas</p>
-                        <div class="tags">
-                            <span>Cartucho</span>
-                            <span>Exatidão</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="ciclones">
-                    <div class="gallery-image">
-                        <div class="image-placeholder"><i class="fas fa-cone"></i></div>
-                        <div class="gallery-overlay">
-                            <button class="view-btn" onclick="openModal(7)">Ver Projetos</button>
-                        </div>
-                        <span class="badge">Ciclone</span>
-                    </div>
-                    <div class="gallery-info">
-                        <h3>Ciclone Duplo - Grande Vazão</h3>
-                        <p>Reciclagem - Tratamento</p>
-                        <div class="tags">
-                            <span>Alta Vazão</span>
+                            <span>Alinhamento</span>
                             <span>Robustez</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="todos">
+                    <div class="gallery-image">
+                        <img src="image/polias especiais.jpg" alt="Polias especiais" loading="lazy">
+                        <div class="gallery-overlay">
+                            <button class="view-btn" onclick="openModal(3)">Ver Projeto</button>
+                        </div>
+                        <span class="badge">Projeto Real</span>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Polias Especiais</h3>
+                        <p>Transmissao e movimentacao industrial</p>
+                        <div class="tags">
+                            <span>Usinagem</span>
+                            <span>Alta Resistencia</span>
                         </div>
                     </div>
                 </div>
@@ -380,7 +304,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 ECMACH. Todos os direitos reservados.</p>
+                <p>&copy; 2026 GABRIEL HENRIQUE DA CRUZ MACHADO. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
